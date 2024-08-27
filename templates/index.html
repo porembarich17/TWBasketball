@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="{{ language }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teamwork Basketball</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="top-bar">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.jpeg') }}" id="logo"/>
+        </div>
+        <nav>
+            <ul>
+                {% if language == 'en' %}
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                {% else %}
+                    <li><a href="#">Start</a></li>
+                    <li><a href="#">Über</a></li>
+                    <li><a href="#">Angebote</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+        <div class="language-switcher">
+            <a href="{{ url_for('english') }}" class="language-button">
+                <img src="{{ url_for('static', filename='english_flag.png') }}" alt="English" class="flag-icon">
+            </a>
+            <a href="{{ url_for('austrian') }}" class="language-button">
+                <img src="{{ url_for('static', filename='austrian_flag.png') }}" alt="Austrian" class="flag-icon">
+            </a>
+        </div>
+    </header>
+    <div class="container">
+        {% if language == 'en' %}
+            <div class="grid-item">Item 1 (English)</div>
+            <div class="grid-item">Item 2 (English)</div>
+            <div class="grid-item">Item 3 (English)</div>
+            <div class="grid-item">Item 4 (English)</div>
+            <div class="grid-item">Item 5 (English)</div>
+            <div class="grid-item">Item 6 (English)</div>
+        {% else %}
+            <div class="grid-item">Item 1 (Austrian)</div>
+            <div class="grid-item">Item 2 (Austrian)</div>
+            <div class="grid-item">Item 3 (Austrian)</div>
+            <div class="grid-item">Item 4 (Austrian)</div>
+            <div class="grid-item">Item 5 (Austrian)</div>
+            <div class="grid-item">Item 6 (Austrian)</div>
+        {% endif %}
+    </div>
+
+    <script>
+        // JavaScript to handle language switching logic
+        document.getElementById('english-btn').addEventListener('click', () => {
+            document.documentElement.lang = 'en';
+            window.location.href = '/en';
+        });
+
+        document.getElementById('austrian-btn').addEventListener('click', () => {
+            document.documentElement.lang = 'de';
+            window.location.href = '/at';
+        });
+    </script>
+</body>
+</html>
