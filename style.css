@@ -63,15 +63,22 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     padding: 20px;
 }
 
 .grid-item {
-    background-color: #f4f4f4;
     padding: 20px;
-    text-align: center;
     border: 1px solid #ddd;
     border-radius: 5px;
+}
+
+.grid-item-img {
+    text-align: center;
+}
+
+.inline-img {
+
+  height: 100px;
 }
