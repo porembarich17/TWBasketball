@@ -19,6 +19,7 @@ body {
   height: auto;
 }
 
+/* Adjust top-bar and overall style */
 .top-bar {
     background-color: #333;
     color: white;
@@ -29,7 +30,6 @@ body {
     width: 100vw;
     height: 6vh;
     position: fixed;
-
     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 14px 0 rgba(0, 0, 0, 0.1);
 }
 
@@ -42,6 +42,7 @@ body {
 
 .top-bar ul li {
     margin-right: 20px;
+    position: relative;
 }
 
 .top-bar ul li a {
@@ -52,6 +53,36 @@ body {
 .top-bar ul li a:hover {
     color: orange;
 }
+
+/* Dropdown content initially hidden */
+.dropdown-content {
+    display: none !important;
+    position: absolute;
+    background-color: #444;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-width: 150px;
+    z-index: 1;
+}
+
+/* Dropdown items styling */
+.dropdown-content li {
+    padding: 10px;
+    text-align: left;
+}
+
+.dropdown-content li a {
+    color: white;
+}
+
+.dropdown-content li a:hover {
+    color: orange;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block !important;
+}
+
 
 .language-switcher {
     display: flex;

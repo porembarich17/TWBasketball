@@ -7,31 +7,48 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="top-bar">
-        <div class="logo">
-            <img src="logo.jpeg" id="logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#section1" class="translate-item" data-en="About Us" data-de="Über Uns">About Us</a></li>
-                <li><a href="#section2" class="translate-item" data-en="NEWS" data-de="NEWS">NEWS</a></li>
-                <li><a href="#section3" class="translate-item" data-en="Teamwork Basketball" data-de="Teamwork Basketball">Teamwork Basketball</a></li>
-                <li><a href="#section4" class="translate-item" data-en="Holiday Camps" data-de="Ferien Camps">Holiday Camps</a></li>
-                <li><a href="#section5" class="translate-item" data-en="International Camps" data-de="Internationale Camps">International Camps</a></li>
-                <li><a href="#section6" class="translate-item" data-en="Testimonials" data-de="Testimonials">Testimonials</a></li>
-                <li><a href="#section7" class="translate-item" data-en="Contact" data-de="Kontakt">Contact</a></li>
-                <li><a href="#section8" class="translate-item" data-en="Application" data-de="Anmeldung">Application</a></li>
-            </ul>
-        </nav>
-        <div class="language-switcher">
-            <button class="language-button" id="english-btn">
-                <img src="english_flag.png" alt="English" class="flag-icon">
-            </button>
-            <button class="language-button" id="german-btn">
-                <img src="austrian_flag.png" alt="German" class="flag-icon">
-            </button>
-        </div>
+  <header class="top-bar">
+      <div class="logo">
+          <img src="logo.jpeg" id="logo">
+      </div>
+      <nav>
+          <ul>
+              <li><a href="#section1" class="translate-item" data-en="About Us" data-de="Über Uns">About Us</a></li>
+
+              <!-- NEWS dropdown -->
+              <li class="dropdown">
+                  <a href="#section2" class="translate-item" data-en="NEWS" data-de="NEWS">NEWS</a>
+                  <ul class="dropdown-content">
+                      <li><a href="#bioJames" class="translate-item" data-en="Bio James" data-de="Bio James">Bio James</a></li>
+                      <li><a href="#bioJason" class="translate-item" data-en="Bio Jason" data-de="Bio Jason">Bio Jason</a></li>
+                  </ul>
+              </li>
+
+              <!-- Teamwork Basketball dropdown -->
+              <li class="dropdown">
+                  <a href="#section3" class="translate-item" data-en="Teamwork Basketball" data-de="Teamwork Basketball">Teamwork Basketball</a>
+                  <ul class="dropdown-content">
+                      <li><a href="#bioJames" class="translate-item" data-en="Bio James" data-de="Bio James">Bio James</a></li>
+                  </ul>
+              </li>
+
+              <li><a href="#section4" class="translate-item" data-en="Holiday Camps" data-de="Ferien Camps">Holiday Camps</a></li>
+              <li><a href="#section5" class="translate-item" data-en="International Camps" data-de="Internationale Camps">International Camps</a></li>
+              <li><a href="#section6" class="translate-item" data-en="Testimonials" data-de="Testimonials">Testimonials</a></li>
+              <li><a href="#section7" class="translate-item" data-en="Contact" data-de="Kontakt">Contact</a></li>
+              <li><a href="#section8" class="translate-item" data-en="Application" data-de="Anmeldung">Application</a></li>
+          </ul>
+      </nav>
+      <div class="language-switcher">
+          <button class="language-button" id="english-btn">
+              <img src="english_flag.png" alt="English" class="flag-icon">
+          </button>
+          <button class="language-button" id="german-btn">
+              <img src="austrian_flag.png" alt="German" class="flag-icon">
+          </button>
+      </div>
     </header>
+
 
     <div id="section1" class="container">
 
@@ -92,6 +109,75 @@
         weiterzuentwickeln. Am Ende der Woche sollen sowohl die Schule als auch die Eltern eine
         deutliche Verbesserung bemerken. Kurz gesagt: Wir bringen die Kinder zum Sprechen!">
         </div>
+
+    </div>
+
+    <hr class="section-split">
+
+    <div id="bioJames" class="container">
+
+        <h1 class="translate-item grid-row" data-en="Biography James Williams"
+        data-de="Biografie James Williams"> Biography James Williams </h1>
+
+        <img src="JW.png" style="width: 200px; height: 200px"> </img>
+
+        <div class="grid-row translate-item"
+        data-en="James Williams is a former American professional basketball player
+        who lives with his family in Mattersburg, Austria. James now works as a
+        teacher and coach of the BK Mattersburg Rocks of the Austrian
+        2nd Bundesliga.
+        James has over 15 years experience working with the Nike Professional
+        Basketball Camp in Caldwell, New Jersey. James Williams has over 10
+        years teaching experience and over 20 years of experience working in
+        multi-cultural environments.
+        James has experience in the USA on the High School and University
+        level as a coach. James is certified to teach Health & Physical
+        Education and English as a Second Language.
+        Education:
+        Bachelor’s Degree
+        Associate Degree
+        Trainerausbildung Bundessportakademie Wien"
+        data-de="James Williams ist ein ehemaliger amerikanischer Basketball-Profi, der mit seiner
+        Familie in Mattersburg, Österreich, lebt. James arbeitet jetzt als Lehrer und Trainer des
+        BK Mattersburg Rocks, der in der 2. Bundesliga Österreichs spielt.
+        James hat über 15 Jahre Erfahrung in der Zusammenarbeit mit dem Nike Professional
+        Basketball Camp in Caldwell, New Jersey. Er verfügt über mehr als 10 Jahre
+        Unterrichtserfahrung und über 20 Jahre Erfahrung in multikulturellen Umgebungen.
+        In den USA sammelte James als Coach Erfahrungen auf der Highschool- und
+        Universitäts-Ebene. Er ist zertifizierter Lehrer für Gesundheits- und Sportunterricht sowie
+        Englisch als Fremdsprache.
+        Ausbildung:
+        Bachelor-Abschluss
+        Associate Degree
+        Trainerausbildung an der Bundessportakademie Wien">
+        </div>
+
+    </div>
+
+    <hr class="section-split">
+
+    <div id="bioJason" class="container">
+
+        <h1 class="translate-item grid-row" data-en="Biography Jason Brindley"
+        data-de="Biografie Jason Brindley"> Biography Jason Brindley </h1>
+
+        <div class="grid-row translate-item"
+        data-en="Jason Brindley has been teaching English since 2008, firstly spending 4 years in Italy, and since
+        2012 Austria. Jason is an extremely experience English teacher and has an excellent ability to
+        connect to students of all ages. A committed educator that always tries to succeed in getting the
+        best out of his students.
+        Jason lives in Slovenia with his wife and son, enjoying the nature and looking to try new things. He
+        is a keen supporter of Liverpool Football Club and loves to be outside hiking in the mountains."
+        data-de="Jason Brindley unterrichtet seit 2008 Englisch. Zunächst verbrachte er vier Jahre in Italien und seit
+        2012 lebt und arbeitet er in Österreich. Jason ist ein äußerst erfahrener Englischlehrer und verfügt
+        über eine hervorragende Fähigkeit, eine Verbindung zu Schülern jeden Alters herzustellen. Als
+        engagierter Pädagoge setzt er alles daran, das Beste aus seinen Schülern herauszuholen.
+        Jason lebt mit seiner Frau und seinem Sohn in Slowenien, genießt die Natur und ist stets auf der
+        Suche nach neuen Erfahrungen. Er ist ein begeisterter Anhänger des Liverpool Football Clubs und
+        liebt es, in den Bergen wandern zu gehen.">
+        </div>
+
+        <div style="width: 100px; height: 100px; background-color:black;"> </div>
 
     </div>
 
@@ -241,7 +327,7 @@
     <hr class="section-split">
 
     <div id="section8" class="container">
-      
+
         <h1 class="translate-item grid-row" data-en="Application"
         data-de="Anmeldung"> Application </h1>
 
