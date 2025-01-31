@@ -1,5 +1,11 @@
 html {
-  scroll-snap-type: y mandatory;
+  /*scroll-snap-type: y mandatory;*/
+}
+
+@media (max-width: 768px) {
+    html {
+      width: 105vw;
+    }
 }
 
 body {
@@ -54,6 +60,67 @@ body {
     color: orange;
 }
 
+/* Mobile Menu */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+}
+
+/* Hide menu on small screens */
+#mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 6vh;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    text-align: center;
+}
+
+#mobile-menu ul {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+#mobile-menu ul li {
+    margin: 10px 0;
+}
+
+/* Show the menu when active */
+#mobile-menu.active {
+    display: flex;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .top-bar {
+      width: 100%;
+    }
+
+    .top-bar .logo {
+      display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
+
+    #mobile-menu {
+        display: none;
+    }
+}
+
+
 /* Dropdown content initially hidden */
 .dropdown-content {
     display: none !important;
@@ -103,34 +170,56 @@ body {
     height: 16px;
 }
 
-/* MAIN */
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
 
-.container {
-    padding-top: 10vh !important;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 20px;
-    height: 86vh;
-    width: 80vw;
-    margin: auto;
+    .top-bar ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
 
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
+    .top-bar ul li {
+        margin: 5px 0;
+    }
 }
 
-.container-3 {
-    padding-top: 10vh !important;
+/* MAIN */
+
+.container, .container-3 {
+    padding-top: 8vh;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: 20px;
     padding: 20px;
-    height: 86vh;
-    width: 80vw;
+    padding-top: 15vh;
+    height: auto;
+    min-height: 100vh;
     margin: auto;
-
     scroll-snap-align: start;
-    scroll-snap-stop: always;
+}
+
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        width: 90vw;
+    }
+    .container-3 {
+        grid-template-columns: repeat(3, 1fr);
+        width: 90vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .container, .container-3 {
+        min-height: 100vh;
+        max-height: none;
+    }
 }
 
 .grid-item {
@@ -169,6 +258,12 @@ body {
 .translate-item.next-to-each-child {
     max-width: 30vw; /* Adjust width as needed */
     line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .translate-item.next-to-each-child {
+        max-width: none;
+    }
 }
 
 .image-container {
@@ -239,6 +334,47 @@ body {
 
   scroll-snap-align: start;
   scroll-snap-stop: always;
+}
+
+@media (max-width: 768px) {
+    .double-border {
+        display: none;
+    }
+}
+
+.double-border {
+  margin: 5vw;
+}
+
+.double-border:before {
+  content: '';
+  display: block;
+  position: relative;
+  top: 0;
+  height: 100%;
+  border: 5px solid orange;
+  transform: rotate( -5deg);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.double-border-content {
+  z-index: -2;
+  position: relative;
+  height: 100%;
+  top: -65vh;
+}
+
+.double-border:after {
+  content: '';
+  display: block;
+  position: relative;
+  top: -135vh;
+  height: 100%;
+  border: 5px solid black;
+  transform: rotate( 5deg);
+  pointer-events: none;
+  z-index: -1;
 }
 
 /* Styles specific to the Impressum page */
