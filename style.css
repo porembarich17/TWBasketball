@@ -197,7 +197,7 @@ body {
     grid-template-columns: 1fr;
     gap: 20px;
     padding: 20px;
-    padding-top: 15vh;
+    padding-top: 10vh;
     height: auto;
     min-height: 100vh;
     margin: auto;
@@ -247,6 +247,7 @@ body {
     justify-content: center; /* Center content horizontally */
     align-items: flex-start; /* Center content vertically */
     flex-wrap: wrap;
+    max-height: 22vh;
 }
 
 .grid-row.next-to-each {
@@ -268,6 +269,52 @@ body {
 
 .image-container {
     text-align: center; /* Center aligns footer text under the image */
+}
+
+.image-container > img.rows-1 {
+  max-height: 90vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.image-container > img.rows-2 {
+  max-height: 45vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.image-container > img.rows-3 {
+  max-height: 25vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.image-container > img.cols-1 {
+  max-width: 90vw;
+}
+.image-container > img.cols-2 {
+  max-width: 45vw;
+}
+.image-container > img.cols-3 {
+  max-width: 25vw;
+}
+.image-container > img.cols-4 {
+  max-width: 20vw;
+}
+
+@media (max-width: 768px) {
+    .image-container > img.cols-1 {
+        max-width: 90vw;
+    }
+    .image-container > img.cols-2 {
+        max-width: 70vw;
+    }
+    .image-container > img.cols-3 {
+        max-width: 70vw;
+    }
+    .image-container > img.cols-4 {
+        max-width: 20vw;
+    }
 }
 
 .image-footer {
